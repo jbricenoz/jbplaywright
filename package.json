@@ -1,0 +1,25 @@
+{
+  "name": "jbplaywright",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jbricenoz/jbplaywright.git"
+  },
+  "keywords": [
+    "PlayWright"
+  ],
+  "author": "Joshua Briceno",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jbricenoz/jbplaywright/issues"
+  },
+  "homepage": "https://github.com/jbricenoz/jbplaywright#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.14.0"
+  }
+}
