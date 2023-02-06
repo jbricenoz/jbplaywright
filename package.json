@@ -21,5 +21,9 @@
   "homepage": "https://github.com/jbricenoz/jbplaywright#readme",
   "devDependencies": {
     "@playwright/test": "^1.30.0"
+  },
+  "dependencies": {
+    "@ngneat/falso": "^6.4.0",
+    "nanoid": "^4.0.1"
   }
 }
