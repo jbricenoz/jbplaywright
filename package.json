@@ -20,6 +20,6 @@
   },
   "homepage": "https://github.com/jbricenoz/jbplaywright#readme",
   "devDependencies": {
-    "@playwright/test": "^1.14.0"
+    "@playwright/test": "^1.30.0"
   }
 }
