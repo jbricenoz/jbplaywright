@@ -30,16 +30,22 @@ const config: PlaywrightTestConfig = {
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: 'html',
+  reporter: [
+    ['list'],
+    ['json', { outputFile: `report.json`}],
+    ['html']
+  ],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Maximum time each action such as `click()` can take. Defaults to 0 (no limit). */
     actionTimeout: 0,
     /* Base URL to use in actions like `await page.goto('/')`. */
-    baseURL: 'http://localhost:3000',
-
+    baseURL: 'https://www.saucedemo.com/',
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
+    launchOptions: {
+      slowMo: 1000,
+    },
   },
 
   /* Configure projects for major browsers */
@@ -48,6 +54,10 @@ const config: PlaywrightTestConfig = {
       name: 'chromium',
       use: {
         ...devices['Desktop Chrome'],
+        headless: false,
+        viewport: { width: 1280, height: 720 },
+        ignoreHTTPSErrors: true, 
+        video: 'on-first-retry',
       },
     },
 
@@ -55,6 +65,10 @@ const config: PlaywrightTestConfig = {
       name: 'firefox',
       use: {
         ...devices['Desktop Firefox'],
+        headless: false,
+        viewport: { width: 1280, height: 720 },
+        ignoreHTTPSErrors: true, 
+        video: 'on-first-retry',
       },
     },
 
@@ -62,6 +76,10 @@ const config: PlaywrightTestConfig = {
       name: 'webkit',
       use: {
         ...devices['Desktop Safari'],
+        headless: false,
+        viewport: { width: 1280, height: 720 },
+        ignoreHTTPSErrors: true, 
+        video: 'on-first-retry',
       },
     },
 

@@ -3,11 +3,14 @@ import { randUser } from '@ngneat/falso';
 randUser()
 let fakeUser = randUser({ length: 10 });
 
-export const user_types = {
-    BASIC: 'basic',
-    BUSINESS: 'business',
-    PRO: 'pro',
-    PREMIUM: 'premium',
+export const users = {
+    INVALID_USER: "invalid_user",
+    STANDARD: 'standard_user',
+    LOCKED_USER: 'locked_out_user',
+    PROBLEM_USER: 'problem_user',
+    PERFORMANCE_USER: 'performance_glitch_user',
+    PASSWORD: 'secret_sauce',
+    INVALID_PASSWORD: 'invalid_password'
 }
 
 export const fake_user_data = (userType?: string) => userType ?
