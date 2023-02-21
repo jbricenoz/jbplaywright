@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "npx playwright test --reporter=list --max-failures 10"
   },
   "repository": {
     "type": "git",
